@@ -10,3 +10,9 @@
 [submodule ".vim/bundle/makegreen"]
 	path = .vim/bundle/makegreen
 	url = https://github.com/reinh/vim-makegreen
+[submodule ".vim/bundle/pyflakes"]
+	path = .vim/bundle/pyflakes
+	url = https://github.com/mitechie/pyflakes-pathogen.git
+[submodule ".vim/bundle/compiler"]
+	path = .vim/bundle/compiler
+	url = https://github.com/olethanh/Vim-nosecompiler.git
