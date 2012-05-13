@@ -1,0 +1,48 @@
+[diff]
+	tool = emerge
+[user]
+	email = mistobaan@gmail.com
+	name = Fabrizio (Misto) Milo
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+	history-view-vpane-position = 537
+	file-view-vpane-position = 433
+	main-window-view = HistoryView
+	file-view-hpane-position = 480
+[github]
+	user = Mistobaan
+[merge]
+    tool = mymeld
+	conflictstyle = diff3
+[mergetool "mymeld"]
+    cmd = $HOME/gitmerge $BASE $LOCAL $REMOTE $MERGED
+[color]
+	ui = auto
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    di = diff
+    dc = diff --cached
+    amend = commit --amend
+    aa = add --all
+    head = !git l -1
+    h = !git head
+    hp = "!source ~/.githelpers && show_git_head"
+    r = !git l -20
+    ra = !git r --all
+    ff = merge --ff-only
+    pullff = pull --ff-only
+    noff = merge --no-ff
+    l = "!source ~/.githelpers && pretty_git_log"
+    la = !git l --all
+    div = divergence
+    gn = goodness
+    gnc = goodness --cached
+    fa = fetch --all
+    pom = push origin master
+    b = branch
+    ds = diff --stat=160,120
+    dh1 = diff HEAD~1
+    lfu = ls-files --other --exclude-standard
