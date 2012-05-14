@@ -6,7 +6,7 @@
 	url = git://github.com/ivanov/vim-ipython
 [submodule ".vim/bundle/snipmate"]
 	path = .vim/bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
+	url = git://github.com/garbas/vim-snipmate.git 
 [submodule ".vim/bundle/makegreen"]
 	path = .vim/bundle/makegreen
 	url = https://github.com/reinh/vim-makegreen
@@ -25,3 +25,16 @@
 [submodule ".vim/bundle/gundo"]
 	path = .vim/bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule ".vim/bundle/snipmate-snippets"]
+	path = .vim/bundle/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
+
+[submodule ".vim/bundle/tlib_vim"]
+	path = .vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule ".vim/bundle/vim-addon-mw-utils"]
+	path = .vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
