@@ -56,7 +56,8 @@ set wildmenu
 let mapleader=","
 set number
 
-set ofu=sytaxcomplete
+" Add spell checking
+set spell
 
 autocmd FileType python set
 
@@ -82,8 +83,33 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+inoremap <C-space> <C-x><C-o>
+set ofu=sytaxcomplete
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"What this function does is that if there is no completion that could happen it will insert a tab. Otherwise it checks to see if there is an omnifunction available and, if so, uses it. Otherwise it falls back to Dictionary completion if there is a dictionary defined. Finally it resorts to simple known word completion. In general, hitting the Tab key will just do the right thing for you in any given situation.
+
+function! SuperCleverTab()
+  if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
+    return "\"
+  else
+    if &omnifunc != ''
+      return "\\"
+    elseif &dictionary != ''
+      return "\"
+    else
+      return "\"
+    endif
+  endif
+endfunction
+
+inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
