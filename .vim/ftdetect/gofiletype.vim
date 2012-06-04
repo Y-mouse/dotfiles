@@ -1,0 +1,1 @@
+/home/fmilo/golang-test/go//misc/vim/ftdetect/gofiletype.vim

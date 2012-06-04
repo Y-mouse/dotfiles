@@ -18,7 +18,8 @@
     tool = mymeld
 	conflictstyle = diff3
 [mergetool "mymeld"]
-    cmd = $HOME/gitmerge $BASE $LOCAL $REMOTE $MERGED
+    cmd = $HOME/meld-1.6.0/bin/meld $BASE $LOCAL $REMOTE $MERGED
+    trustExitCode = false
 [color]
 	ui = auto
 	diff = auto
@@ -52,3 +53,4 @@
     ds = diff --stat=160,120
     dh1 = diff HEAD~1
     lfu = ls-files --other --exclude-standard
+    meld = !~/git-meld/git-meld.pl

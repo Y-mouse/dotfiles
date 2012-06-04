@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/fmilo/dotfiles.git'
 let g:netrw_dirhist_2='/Users/fmilo/dotfiles.git/.vim'
 let g:netrw_dirhist_3='/Users/fmilo/dotfiles.git'
+let g:netrw_dirhist_4='/home/fmilo/amx-score'
+let g:netrw_dirhist_5='/home/fmilo/golang-test/go/src/pkg/launchpad.net/goamz/aws'
