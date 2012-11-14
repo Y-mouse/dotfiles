@@ -9,6 +9,8 @@
 *.class
 *.svn
 
+.pydevproject
+
 # Compiled source #
 ###################
 *.com

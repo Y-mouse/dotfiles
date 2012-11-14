@@ -1,5 +1,5 @@
 ;;------------------------------------------------------------------------------
-
+(add-to-list 'load-path "~/.emacs.d")
 (load "~/.emacs.d/fjAbbrevs")
 (load "~/.emacs.d/fjFileUtils")
 (load "~/.emacs.d/fjUtils")
@@ -7,6 +7,8 @@
 (load "~/.emacs.d/iswitch-buffer.el")
 (load "~/.emacs.d/igrep")
 (load "~/.emacs.d/python-mode.el")
+(load "~/.emacs.d/auto-complete-config.el")
+(load "~/.emacs.d/go-autocomplete.el")
 
 ;;------------------------------------------------------------------------------
 ;; TAB to indent while programming
@@ -58,10 +60,11 @@
 
 ;; hilight tabs and useless trailing whitespace
 ;; make a face for tabs
-(make-face 'tab-face)
-(make-face 'trailing-space-face)
-(set-face-background 'tab-face "Gray15")
-(set-face-background 'trailing-space-face "Gray25")
+
+;;(make-face 'tab-face)
+;;(make-face 'trailing-space-face)
+;;(set-face-background 'tab-face "Gray15")
+;;(set-face-background 'trailing-space-face "Gray25")
 
 (add-hook 'font-lock-mode-hook 'show-whitespace) 
 
@@ -173,5 +176,16 @@
 (load "~/.emacs.d/cmake-mode.el")
 (load "~/.emacs.d/go-mode-load.el")
 (load "~/.emacs.d/go-mode.el")
-;; Start the Server
+
+
+;; Autocomplete 
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
+(ac-config-default)
+(define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
+
+
+; Start the Server
 (server-start)
+
