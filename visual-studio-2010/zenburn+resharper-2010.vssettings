@@ -58,6 +58,7 @@
 							<Item Name="User Types(Interfaces)" Foreground="0x0081D0D0" Background="0x02000000" BoldFont="No"/>
 							<Item Name="User Types(Delegates)" Foreground="0x00AFEFEF" Background="0x02000000" BoldFont="No"/>
 							<Item Name="User Types(Value types)" Foreground="0x00AFEFEF" Background="0x02000000" BoldFont="No"/>
+							<Item Name="C/C++ User Keywords" Foreground="0x00AFEFEF" Background="0x02000000" BoldFont="No"/>
 							<Item Name="Indicator Margin" Foreground="0x02000000" Background="0x00F0F0F0" BoldFont="No"/>
 							<Item Name="Line Numbers" Foreground="0x007D9B7D" Background="0x003F3F3F" BoldFont="No"/>
 							<Item Name="Preprocessor Keyword" Foreground="0x00D3D08C" Background="0x02000000" BoldFont="No"/>

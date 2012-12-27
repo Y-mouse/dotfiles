@@ -159,6 +159,8 @@
 					<RemoveShortcut Command="ReSharper_SilentCleanupCode" Scope="Global">Ctrl+Q, Ctrl+F</RemoveShortcut>
 					<RemoveShortcut Command="ReSharper_SilentCleanupCode" Scope="Global">Ctrl+Q, F</RemoveShortcut>
 					<RemoveShortcut Command="ReSharper.ReSharper_DuplicateText" Scope="Text Editor">Ctrl+D</RemoveShortcut>
+					<Shortcut Command="Build.BuildSolution" Scope="Global">Ctrl+C,Ctrl+C</Shortcut>
+					<Shortcut Command="Build.BuildSolution" Scope="Text Editor">Ctrl+C,Ctrl+C</Shortcut>
 					<Shortcut Command="ReSharper.ReSharper_GotoPreviousOccurence" Scope="Global">Ctrl+Alt+PgUp</Shortcut>
 					<Shortcut Command="ReSharper.ReSharper_GotoPreviousOccurence" Scope="Text Editor">Ctrl+Alt+PgUp</Shortcut>
 					<Shortcut Command="ReSharper.ReSharper_GotoNextOccurence" Scope="Global">Ctrl+Alt+PgDn</Shortcut>
@@ -227,8 +229,6 @@
 					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark9" Scope="Text Editor">Ctrl+Shift+9</Shortcut>
 					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark0" Scope="Global">Ctrl+0</Shortcut>
 					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark0" Scope="Text Editor">Ctrl+0</Shortcut>
-					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark1" Scope="Global">Ctrl+1</Shortcut>
-					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark1" Scope="Text Editor">Ctrl+1</Shortcut>
 					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark2" Scope="Global">Ctrl+2</Shortcut>
 					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark2" Scope="Text Editor">Ctrl+2</Shortcut>
 					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark3" Scope="Global">Ctrl+3</Shortcut>
@@ -352,13 +352,14 @@
 					<Shortcut Command="ReSharper.ReSharper_GenerateFileBesides" Scope="Text Editor">Ctrl+Alt+Ins</Shortcut>
 					<Shortcut Command="ReSharper.ReSharper_LiveTemplates_Insert" Scope="Text Editor">Ctrl+Q, Ctrl+L</Shortcut>
 					<Shortcut Command="ReSharper.ReSharper_LiveTemplates_Insert" Scope="Text Editor">Ctrl+Q, L</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GenerateFileBesides" Scope="Text Editor">Ctrl+X, B</Shortcut>
 					<Shortcut Command="ReSharper.ReSharper_SurroundWith" Scope="Text Editor">Ctrl+Q, Ctrl+U</Shortcut>
 					<Shortcut Command="ReSharper.ReSharper_SurroundWith" Scope="Text Editor">Ctrl+Q, U</Shortcut>
 					<Shortcut Command="ReSharper.ReSharper_ProfileVisualStudio" Scope="Global">Ctrl+Shift+Alt+P</Shortcut>
 					<Shortcut Command="ReSharper.ReSharper_ProfileVisualStudio" Scope="Text Editor">Ctrl+Shift+Alt+P</Shortcut>
 					<Shortcut Command="ReSharper_SilentCleanupCode" Scope="Text Editor">Ctrl+Q, Ctrl+F</Shortcut>
 					<Shortcut Command="ReSharper_SilentCleanupCode" Scope="Text Editor">Ctrl+Q, F</Shortcut>
-					<Shortcut Command="ReSharper_QuickFix" Scope="Text Editor">Alt+Enter</Shortcut>
+					<Shortcut Command="ReSharper_QuickFix" Scope="Text Editor">Ctrl+1</Shortcut>
 					<Shortcut Command="ReSharper_WindowManager_CloseRecentTool" Scope="Global">Ctrl+Shift+F4</Shortcut>
 					<Shortcut Command="ReSharper_WindowManager_CloseRecentTool" Scope="Text Editor">Ctrl+Shift+F4</Shortcut>
 					<Shortcut Command="ReSharper_WindowManager_ActivateRecentTool" Scope="Global">Ctrl+Alt+Bkspce</Shortcut>
