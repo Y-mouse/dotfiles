@@ -39,7 +39,8 @@
 [alias] 
     a = add
     am = commit --amend
-    aa = add --all
+    aaa = add --all
+    aa = add -u
 
     b = branch
     ba = branch --all
@@ -109,6 +110,8 @@
 
     wtf = whatchanged --pretty="format:'%C(yellow)%h%Creset %Cgreen(%ar)%Creset %C(bold blue)< %an> %Creset %Cred%d%Creset %s'" -p
     wtf1 = !git wtf -n 1
+
+    gofmt = !gofmt -w `git diff --name-only --cached --diff-filter=AM | grep \"\\.go$\"`
 
 [credential]
 	helper = osxkeychain
