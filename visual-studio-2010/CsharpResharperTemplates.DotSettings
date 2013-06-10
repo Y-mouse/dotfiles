@@ -10,6 +10,7 @@ public void $MethodUnderTest$_$Scenario$_$ExpectedBehavior$(){&#xD;
 }</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9C8B8D47B5BA1B48A3FC26B416265F92/Reformat/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9C8B8D47B5BA1B48A3FC26B416265F92/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9C8B8D47B5BA1B48A3FC26B416265F92/Categories/=Imported_00202_002F20_002F2013/@EntryIndexedValue">Imported 2/20/2013</s:String>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9C8B8D47B5BA1B48A3FC26B416265F92/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9C8B8D47B5BA1B48A3FC26B416265F92/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9C8B8D47B5BA1B48A3FC26B416265F92/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
