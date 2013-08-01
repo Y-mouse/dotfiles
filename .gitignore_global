@@ -2,9 +2,7 @@
 *.orig
 *.rej
 *.swp
-.#*
 *.obj
-*.o
 .DS_Store
 *.class
 *.svn
@@ -17,7 +15,6 @@
 *.class
 *.dll
 *.exe
-*.o
 *.so
 
 # Packages #
