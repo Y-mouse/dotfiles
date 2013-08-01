@@ -290,6 +290,21 @@ c.IPythonWidget.editor = 'subl'
 # A list of dotted module names of IPython extensions to load.
 # c.IPKernelApp.extensions = []
 
+c.TerminalIPythonApp.extensions = [
+    'line_profiler_ext',
+]
+
+c.InteractiveShellApp.extensions = [
+    'line_profiler_ext',
+]
+
+c.TerminalIPythonApp.extensions = [
+    'memory_profiler_ext',
+]
+c.InteractiveShellApp.extensions = [
+    'memory_profiler_ext',
+]
+
 # redirect stderr to the null device
 # c.IPKernelApp.no_stderr = False
 
