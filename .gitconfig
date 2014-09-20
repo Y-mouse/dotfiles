@@ -10,10 +10,17 @@
 
 [github]
 	user = mistobaan@gmail.com
-	
+
+# http://www.araxis.com/merge/documentation-windows/integrating-with-other-applications.en#msysGit	
+
+[diff]
+    tool = araxis
+
+[difftool "araxis"]
+    path = /Applications/Araxis Merge.app/Contents/Utilities/compare
+
 [merge]
-    tool = ediff
-    conflictstyle = diff3
+    tool = araxis
 
     # Include the summary of merged commits into all newly created merge
     # commits. The newly created merge commit will contain a one-line summary
@@ -25,6 +32,10 @@
 
     # Show Progress
     progress = true
+
+[mergetool "araxis"]
+    path = /Applications/Araxis Merge.app/Contents/Utilities/compare
+
 
 [branch "develop"]
     mergeoptions=--no-ff    
@@ -115,9 +126,20 @@
 
 [credential]
 	helper = osxkeychain
+
+[mergetool]
+	keepBackup = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

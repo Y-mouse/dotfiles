@@ -1,0 +1,23 @@
+export EDITOR='subl -w'
+
+# added by Anaconda 1.6.1 installer
+export PATH="//anaconda/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+# added by Anaconda 1.9.1 installer
+export PATH="/Users/fabrizio/anaconda/bin:$PATH"
+export LIBRARY_PATH+=":/usr/local/lib"
+export CPATH+=":/usr/local/include"
+
+#export PATH=$PATH:/usr/local/Cellar/go/1.2.1/libexec/bin
+#export GOROOT=`go env GOROOT`
+[[ -s "/Users/fabrizio/.gvm/scripts/gvm" ]] && source "/Users/fabrizio/.gvm/scripts/gvm"
+
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#[[ -s "/Users/fabrizio/.rvm/scripts/rvm" ]] && source "/Users/fabrizio/.rvm/scripts/rvm" 
+
+gvm use go1.3
+gvm pkgset use default
+
+
