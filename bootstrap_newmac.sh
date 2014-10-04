@@ -56,7 +56,9 @@ mac_finder_extensions=(
   qlmarkdown
   quicklook-json
   screenflick
+  # development
   iterm2
+  sourcetree
   slack
   transmit
   appcleaner
