@@ -48,5 +48,5 @@
 	path = git-hooks/gofmt-git-hook
 	url = https://github.com/edsrzf/gofmt-git-hook.git
 [submodule "3195465"]
-	path = 3195465
+	path = osx-settings
 	url = https://gist.github.com/3195465.git
