@@ -1,0 +1,7 @@
+Library
+.ssh
+.gem/specs
+.gem/ruby
+.atom/compile-cache
+.atom/storage/
+.atom/.node-gyp
