@@ -47,3 +47,6 @@
 [submodule "git-hooks/gofmt-git-hook"]
 	path = git-hooks/gofmt-git-hook
 	url = https://github.com/edsrzf/gofmt-git-hook.git
+[submodule "3195465"]
+	path = 3195465
+	url = https://gist.github.com/3195465.git
