@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/fabrizio/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	compress = 6
 [diff]
 	tool = vimdiff
@@ -69,6 +69,7 @@
     ds  = diff  -C --stat
     dsp = diff  -C --stat -p
     dcw = diff  -C --word-diff
+    dt = difftool
     # list  conflicts
     lsc = !git diff -C --name-only --diff-filter=U 
 
@@ -129,6 +130,8 @@
 
 [mergetool]
 	keepBackup = true
+[difftool]
+	prompt = false
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [mergetool "Kaleidoscope"]
