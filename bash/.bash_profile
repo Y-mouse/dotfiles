@@ -6,7 +6,7 @@ GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS="yes"
 
 # added by Anaconda 2.0.0 installer
-export PATH="${HOME}/anaconda/bin:$PATH"
+export PATH="${HOME}/anaconda2/bin:$PATH"
 
 export EDITOR='vim'
 
