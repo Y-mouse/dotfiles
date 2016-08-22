@@ -13,6 +13,9 @@
 
 # http://www.araxis.com/merge/documentation-windows/integrating-with-other-applications.en#msysGit	
 
+[init]
+    templatedir = ~/.git_template
+
 [diff]
     tool = araxis
 
@@ -58,6 +61,8 @@
     ci = commit
     cm = commit -m
     co = checkout
+    # ctags
+    ctags = !.git/hooks/ctags
 
     # diff
     d = diff -C
