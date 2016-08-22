@@ -4,42 +4,83 @@ call pathogen#infect()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" use vim settings instead of vi
 set nocompatible
-" allow unsaved background buffers and remember marks/undo for them
+set modelines=0 
+" paste without auto-indentation
+set paste
+" hide buffers, not close them
 set hidden
 " remember more commands and search history
 set history=10000
-set nocompatible
 set tabstop=4
+
+" use indents of 4 spaces
 set shiftwidth=4
+
+" let backspace delete indent
 set softtabstop=4
+
+" tabs are spaces
 set expandtab
+
+" enable autoindentation
 set autoindent
 set laststatus=2
+
+" searching
 set hlsearch
 set incsearch
+
+" highlight matching bracket/parenthesis
 set showmatch
+
 " make searches case-sensitive only if they contain upper-case characters
-set ignorecase smartcase
+set ignorecase smartcase infercase
+
+" show line numbers
+set number
+
+" no line wrapping
+set nowrap
+
 " highlight current line
 set cursorline
+set cursorcolumn
 set cmdheight=2
 set switchbuf=useopen
 set numberwidth=5
 set showtabline=2
 set winwidth=79
 set shell=bash
+
+
+" disable startup message
+set shortmess+=I
+
+" stop unnecessary redrawing
+set lazyredraw
+
+
+" remove trailing whitespaces and ^M chars
+autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+
+
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
+
 " keep more context when scrolling off the end of a buffer
 set scrolloff=3
+
 " Store temporary files in a central spot
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+"
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+"
 " display incomplete commands
 set showcmd
 " Enable highlighting for syntax
@@ -69,9 +110,9 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256
 set background=dark
-set term=xterm-256color
-colorscheme zenburn
-let g:zenburn_force_dark_Background=1
+set term=screen-256color-bce
+colorscheme default 
+let g:solarized_termcolors=256
 set guifont=Inconsolata:h18
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set foldmethod=indent
@@ -83,14 +124,20 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" Map Ctrl-A to start of line
+inoremap <c-a> <Home>
+inoremap <c-e> <End>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
 inoremap <C-space> <C-x><C-o>
+
 set ofu=sytaxcomplete
+
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
