@@ -13,3 +13,6 @@ export EDITOR='vim'
 # CDPATH !http://linux.101hacks.com/cd-command/cdpath/
 if test “${PS1+set}”; then CDPATH=$HOME/workspace; fi
 
+ulimit -c unlimited
+ulimit -d unlimited
+ulimit -f unlimited

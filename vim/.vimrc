@@ -55,6 +55,11 @@ set winwidth=79
 set shell=bash
 
 
+" press esc to remove the highlight
+nnoremap <CR> :noh<CR><CR>
+" press F3 to toggle the highlight
+nnoremap <F3> :set hlsearch!<CR>
+
 " disable startup message
 set shortmess+=I
 
@@ -124,9 +129,20 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" open new split panes to right and bottom
+set splitbelow
+set splitright
+
+
 " Map Ctrl-A to start of line
 inoremap <c-a> <Home>
 inoremap <c-e> <End>
+
+" add fugitive status line
+set statusline="%{fugitive#statusline()}"
+
+" set vertical split in fugitive gDiff
+set diffopt+=vertical
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType python set omnifunc=pythoncomplete#Complete
