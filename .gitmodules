@@ -25,3 +25,33 @@
 [submodule "vim/.vim/bundle/ag"]
 	path = vim/.vim/bundle/ag
 	url = https://github.com/rking/ag.vim
+[submodule "vim/.vim/bundle/vim-ipython"]
+	path = vim/.vim/bundle/vim-ipython
+	url = git://github.com/ivanov/vim-ipython
+
+[submodule "vim/.vim/bundle/pyflakes"]
+	path = vim/.vim/bundle/pyflakes
+	url = https://github.com/mitechie/pyflakes-pathogen.git
+
+[submodule "vim/.vim/bundle/syntastic"]
+	path = vim/.vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+
+[submodule "vim/.vim/bundle/snipmate-snippets"]
+	path = vim/.vim/bundle/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
+
+[submodule "vim/.vim/bundle/tlib_vim/"]
+	path = vim/.vim/bundle/tlib_vim
+	url = https://github.com/tomtom/tlibvim.git
+[submodule "vim/.vim/bundle/vim-addon-mw-utils"]
+	path = vim/.vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWebervim-addon-mw-utils.git
+
+[submodule "vim/.vim/bundle/supertab"]
+	path = vim/.vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "3195465"]
+	path = osx-settings
+	url = https://gist.github.com/3195465.git
+
