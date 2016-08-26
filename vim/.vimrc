@@ -54,6 +54,14 @@ set showtabline=2
 set winwidth=79
 set shell=bash
 
+" wildignore
+set wildignore+=*.a,*.o
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+set wildignore+=.DS_store,.git,.hg,.svn
+set wildignore+=*~,*.swp,*.tmp
+
+"show hidden files in ctrl_p
+let g:ctrlp_show_hidden = 1 
 
 " press esc to remove the highlight
 nnoremap <CR> :noh<CR><CR>
