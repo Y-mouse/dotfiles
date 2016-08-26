@@ -1,6 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	compress = 6
+	editor = subl -n -w
 [diff]
 	tool = vimdiff
 
@@ -50,11 +51,15 @@
 	branch = auto
 	interactive = auto
 
-[alias] 
+[alias]
+    # List all the authors in the branch
+    branchauthors = "! for branch in `git branch -r | grep -v HEAD`;do echo `git show --format=\"%ai %ar by %an %Cgreen($branch)%Creset \" | head -n 1` \t$branch; done | sort -r"
+
     a = add
     am = commit --amend
     aaa = add --all
     aa = add -u
+    amend = commit --amend --no-edit
 
     b = branch
     ba = branch --all
@@ -65,8 +70,128 @@
     ctags = !.git/hooks/ctags
 
     # diff
-    d = diff -C
-    di = diff -C -w
+    d = diff -C # find also copies
+    di = diff -C -w # find copies
+    dc = diff --cached
+    dcs = diff --cached -C --stat=160,120
+    dh1 = diff HEAD~1
+
+    serve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
+
+    dw  = diff  -C -w
+    ds  = diff  -C --stat
+    dsp = diff  -C --stat -p
+    dcw = diff  -C --word-diff
+    # list  conflicts
+    lsc = !git diff -C --name-only --diff-filter=U
+
+    # show the parent of the current branch
+    dm = log --merge -p
+
+    f = fetch
+    fa = fetch --all
+    st = status -s -b -u
+    fp = "!git push -f origin \"$(git rev-parse --abbrev-ref HEAD)\""
+
+    l = log --abbrev-commit --graph  --date=relative --pretty="format:'%C(yellow)%h%Creset %Cgreen(%ar)%Creset %C(bold blue)< %an> %Creset %Cred%d%Creset %s'" --decorate
+    la = !git l --all
+    ll = !git l --pretty="format:'%C(yellow)%h%Creset %Cgreen(%ar)%Creset %C(bold blue)< %an> %Creset %Cred%d%Creset %s'" --stat --summary
+
+    # this is the most commonly used one, it turns out!
+    l19 = !git l -19
+
+    # and this one can be a real lifesaver on a complex tree
+    lsd = log   --graph --pretty="format:'%C(yellow)%h%Creset %Cgreen(%ar)%Creset %C(bold blue)< %an> %Creset %Cred%d%Creset %s'" --all --simplify-by-decoration
+
+    # log left-right; requires argument like A...B (3 dots)
+    lglr= log  --graph  --pretty="format:'%C(yellow)%h%Creset %Cgreen(%ar)%Creset %C(bold blue)< %an> %Creset %Cred%d%Creset %s'" --boundary --left-right --cherry-pick
+
+    # list all files
+    ls = ls-files
+
+    # list files non added
+    lsu = ls-files --other --exclude-standard
+
+    # list files ignored
+    lsi = ls-files --other --exclude-standard -i
+
+    head = !git l -1
+    h = !git head
+    hp = git show -p --pretty=oneline
+    r = !git l -20
+    ra = !git r --all
+    ref = reflog show --date=relative
+    refnow = reflog show --date=relative --since='1 hour'
+    ff = merge --ff-only
+    pullff = pull --ff-only
+    noff = merge --no-ff
+
+    sl  = stash list
+    sp  = stash pop
+    ss  = stash save
+    # "show-branch -g=N" can't be aliased for N easily, so we stop here:
+    sb  = show-branch
+    # pg sbt master pu -- if the last line is 'master' and not 'master^'
+    # or 'master~N' then pu is a descendent of master
+    sbt = show-branch --topics
+    sbs = show-branch --sha1-name
+
+    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format: %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+
+    wtf = whatchanged --pretty="format:'%C(yellow)%h%Creset %Cgreen(%ar)%Creset %C(bold blue)< %an> %Creset %Cred%d%Creset %s'" -p
+    wtf1 = !git wtf -n 1
+
+    gofmt = !gofmt -w `git diff --name-only --cached --diff-filter=AM | grep \"\\.go$\"`
+
+    summary = log --pretty=oneline
+    tree    = log --graph --pretty=oneline --abbrev-commit --decorate --color
+    forest  = !git tree --all
+    recent  = !git tree -10
+    message = log --format=format:%s -1
+    last    = log --format=format:%H -1
+    revs    = log --format=format:%H
+    preview = diff --staged
+
+    # git codereview
+    change = codereview change
+    gofmt = codereview gofmt
+    mail = codereview mail
+    pending = codereview pending
+    submit = codereview submit
+    sync = codereview sync
+
+    cleanup = "!git branch --merged | egrep -v '^.*master' | egrep -v '^.*develop' | xargs -n 1 git branch -d"
+
+[credential]
+	helper = osxkeychain
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[init]
+	templatedir = ~/.git_template
+
+[http]
+	cookiefile = /Users/fabrizio/.gitcookies
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[push]
+	default = simple
+[difftool]
     dc = diff --cached
     ds = diff --cached -C --stat=160,120
     dh1 = diff HEAD~1
