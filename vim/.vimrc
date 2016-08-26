@@ -144,6 +144,9 @@ set statusline="%{fugitive#statusline()}"
 " set vertical split in fugitive gDiff
 set diffopt+=vertical
 
+" set the name of the tag files to search
+set tags=.git/tags;./tags;$HOME,tags;
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
