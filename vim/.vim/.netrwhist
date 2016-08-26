@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/fmilo/workspace/tensorflow/tensorflow/core/framework'
-let g:netrw_dirhist_2='/home/fmilo/workspace/tensorflow'
-let g:netrw_dirhist_3='/etc/apt/sources.list.d'
-let g:netrw_dirhist_4='/home/fmilo/workspace/grpc-java/examples'
-let g:netrw_dirhist_5='/home/fmilo/workspace/eigen'
-let g:netrw_dirhist_6='/home/fmilo/workspace/eigen/.git'
-let g:netrw_dirhist_7='/home/fmilo/workspace/tensorflow'
-let g:netrw_dirhist_8='/home/fmilo/workspace/h2o-3/h2o-tensorflow'
-let g:netrw_dirhist_9='/home/fmilo/workspace/h2o-3'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/fmilo/workspace/h2o-3/h2o-bindings/bin'

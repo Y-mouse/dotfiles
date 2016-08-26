@@ -96,8 +96,7 @@ set backspace=indent,eol,start
 "
 " display incomplete commands
 set showcmd
-" Enable highlighting for syntax
-syntax on
+
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
@@ -122,10 +121,12 @@ filetype plugin indent on
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256
-set background=dark
+set background=light
 set term=screen-256color-bce
-colorscheme default 
+"enable 256 colors to solarized. Must be before the colorscheme commmand
 let g:solarized_termcolors=256
+colorscheme solarized
+
 set guifont=Inconsolata:h18
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set foldmethod=indent
