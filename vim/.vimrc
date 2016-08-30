@@ -4,6 +4,9 @@ call pathogen#infect()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" use word-wrap
+set wrap
+
 " use vim settings instead of vi
 set nocompatible
 set modelines=0 
@@ -161,6 +164,14 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+" Force markdown format in buffer
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+
+" enable feced code highligth in markdown block
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
 
 inoremap <C-space> <C-x><C-o>
 
