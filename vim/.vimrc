@@ -153,6 +153,20 @@ inoremap <c-e> <End>
 " add fugitive status line
 set statusline="%{fugitive#statusline()}"
 
+
+" add synstastic statusline
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStauslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_List = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" use python 
+let g:syntastic_python_checkers = ['pylint']
+
 " set vertical split in fugitive gDiff
 set diffopt+=vertical
 
