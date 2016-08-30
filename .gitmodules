@@ -55,9 +55,6 @@
 	path = osx-settings
 	url = https://gist.github.com/3195465.git
 
-[submodule "vim/.vim/bundle/Conque-Shell"]
-	path = vim/.vim/bundle/Conque-Shell
-	url = https://github.com/vim-scripts/Conque-Shell.git
 [submodule "vim/.vim/bundle/vim-colors-solarized"]
 	path = vim/.vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
@@ -67,3 +64,9 @@
 [submodule "vim/.vim/bundle/vim-markdown"]
 	path = vim/.vim/bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
+[submodule "vim/.vim/bundle/vim-indent-object"]
+	path = vim/.vim/bundle/vim-indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object
+[submodule "vim/.vim/bundle/argtextobj.vim"]
+	path = vim/.vim/bundle/argtextobj.vim
+	url = https://github.com/vim-scripts/argtextobj.vim.git
