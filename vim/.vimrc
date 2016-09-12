@@ -9,7 +9,7 @@ set wrap
 
 " use vim settings instead of vi
 set nocompatible
-set modelines=0 
+set modelines=0
 " paste without auto-indentation
 set paste
 " hide buffers, not close them
@@ -64,7 +64,7 @@ set wildignore+=.DS_store,.git,.hg,.svn
 set wildignore+=*~,*.swp,*.tmp
 
 "show hidden files in ctrl_p
-let g:ctrlp_show_hidden = 1 
+let g:ctrlp_show_hidden = 1
 
 " press esc to remove the highlight
 nnoremap <CR> :noh<CR><CR>
@@ -260,8 +260,6 @@ au BufNewFile,BufRead *.py
     \ set autoindent
     \ set fileformat=unixlet 
 
-" Flag unnecesary whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " UTF8 Support
 
@@ -299,3 +297,44 @@ endfunction
 nmap <silent> <leader>dl :call DiffToggle(1)<cr>
 nmap <silent> <leader>dc :call DiffToggle(2)<cr>
 nmap <silent> <leader>dr :call DiffToggle(3)<cr>
+
+set paste
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+"python with conda support
+python << EOF
+import os
+import sys
+if 'conda' in sys.version:
+    pass
+EOF
+
+" highlight tabs and trailing spaces
+set listchars=tab:>-,trail:-
+set list listchars=tab:→\ ,trail:·
+set list listchars=tab:→\ ,trail:·,extends:>,precedes:<,nbsp:_
+
+" highlight special characters in yellow
+highlight SpecialKey term=standout ctermbg=yellow guibg=yellow
+
+" highlight ExtraWhiteSpaces
+highlight UnwanttedTab ctermbg=red guibg=darkred
+highlight TrailSpace guibg=red ctermbg=darkred
+match UnwanttedTab /\t/
+match TrailSpace / \+$/
+
+autocmd ColorScheme * highlight UnwanttedTab ctermbg=red guibg=darkred
+autocmd ColorScheme * highlight TrailSpace guibg=red ctermbg=darkred
+
+" disable line numbers inside the geeknote navigation window
+autocmd FileType geeknote setlocal nonumber
+
