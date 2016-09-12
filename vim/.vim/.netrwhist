@@ -1,7 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-<<<<<<< aff3d2ad333feed496972ff18c5a36d77273d06c
-let g:netrw_dirhist_1='/home/fmilo/workspace/h2o-3/h2o-bindings/bin'
-=======
-let g:netrw_dirhist_1='/Users/fmilo/workspace/deeplearning/tensorbook'
->>>>>>> add markdown
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/fmilo/workspace/deeperwater/tools/provisioning/deepwater-build-ami'
+let g:netrw_dirhist_2='/home/fmilo/workspace/tensorflow'

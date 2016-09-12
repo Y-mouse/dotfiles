@@ -16,3 +16,6 @@ if test “${PS1+set}”; then CDPATH=$HOME/workspace; fi
 ulimit -c unlimited
 ulimit -d unlimited
 ulimit -f unlimited
+
+export HTTPS_PROXY=172.16.3.159:3128
+export HTTP_PROXY=172.16.3.159:3128

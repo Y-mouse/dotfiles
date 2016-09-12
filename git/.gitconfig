@@ -1,3 +1,7 @@
+[user]
+	name = Fabrizio (Misto) Milo
+	email = mistobaan@gmail.com
+
 [core]
 	excludesfile = ~/.gitignore_global
 	compress = 6
@@ -5,26 +9,21 @@
 [diff]
 	tool = vimdiff
 
-[user]
-	name = Fabrizio (Misto) Milo
-	email = mistobaan@gmail.com
+[difftool]
+    prompt = false
+
+[difftool "araxis"]
+    # http://www.araxis.com/merge/documentation-windows/integrating-with-other-applications.en#msysGit	
+    path = /Applications/Araxis Merge.app/Contents/Utilities/compare
 
 [github]
 	user = mistobaan@gmail.com
 
-# http://www.araxis.com/merge/documentation-windows/integrating-with-other-applications.en#msysGit	
-
 [init]
     templatedir = ~/.git_template
 
-[diff]
-    tool = araxis
-
-[difftool "araxis"]
-    path = /Applications/Araxis Merge.app/Contents/Utilities/compare
-
 [merge]
-    tool = araxis
+	tool = diffconflicts
 
     # Include the summary of merged commits into all newly created merge
     # commits. The newly created merge commit will contain a one-line summary
@@ -259,9 +258,9 @@
 	helper = osxkeychain
 
 [mergetool]
-	keepBackup = true
-[difftool]
-	prompt = false
+	keepBackup = false
+	diffconflictstrustExitCode = true
+
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [mergetool "Kaleidoscope"]
@@ -278,3 +277,5 @@
 	smudge = git-media-smudge %f
 [push]
 	default = matching
+[mergetool "diffconflicts"]
+	cmd = $HOME/dotfiles/bin/diffconflicts vim $BASE $LOCAL $REMOTE $MERGED

@@ -81,6 +81,8 @@ set lazyredraw
 " remove trailing whitespaces and ^M chars
 autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
+" set json syntax hlight
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
@@ -115,11 +117,18 @@ set number
 " Add spell checking
 set spell
 
-autocmd FileType python set
+" autocmd FileType python set
 
 filetype on
 filetype plugin indent on
 
+" CtrlP configuration
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ }
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -129,6 +138,8 @@ set term=screen-256color-bce
 "enable 256 colors to solarized. Must be before the colorscheme commmand
 let g:solarized_termcolors=256
 colorscheme solarized
+" turn high visibility for diffmore
+let g:solarized_diffmode="high"
 
 set guifont=Inconsolata:h18
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -154,18 +165,21 @@ inoremap <c-e> <End>
 set statusline="%{fugitive#statusline()}"
 
 
-" add synstastic statusline
+" add syntastic statusline
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStauslineFlag()}
+set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_List = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 " use python 
 let g:syntastic_python_checkers = ['pylint']
+
+" use pylintrc
+let g:syntastic_python_pylint_args = "--rcfile=/home/fmilo/.pylintrc"
 
 " set vertical split in fugitive gDiff
 set diffopt+=vertical
@@ -226,4 +240,26 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
- 
+
+" Disable one diff window during a three-way diff allowing you to cut out the
+" noise of a three-way diff and focus on just the changes between two versions
+" at a time. Inspired by Steve Losh's Splice
+function! DiffToggle(window)
+  " Save the cursor position and turn on diff for all windows
+  let l:save_cursor = getpos('.')
+  windo :diffthis
+  " Turn off diff for the specified window (but keep scrollbind) and move
+  " the cursor to the left-most diff window
+  exe a:window . "wincmd w"
+  diffoff
+  set scrollbind
+  set cursorbind
+  exe a:window . "wincmd " . (a:window == 1 ? "l" : "h")
+  " Update the diff and restore the cursor position
+  diffupdate
+  call setpos('.', l:save_cursor)
+endfunction
+" Toggle diff view on the left, center, or right windows
+nmap <silent> <leader>dl :call DiffToggle(1)<cr>
+nmap <silent> <leader>dc :call DiffToggle(2)<cr>
+nmap <silent> <leader>dr :call DiffToggle(3)<cr>
