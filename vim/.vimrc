@@ -143,8 +143,14 @@ let g:solarized_diffmode="high"
 
 set guifont=Inconsolata:h18
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable folding 
 set foldmethod=indent
 set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
@@ -240,6 +246,36 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
+
+
+let g:SimpylFold_docstring_preview = 1
+
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=2
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unixlet 
+
+" Flag unnecesary whitespace
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" UTF8 Support
+
+set encoding=utf-8
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let python_highlight_all=1
+syntax on
+" ignore PYC files 
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+set clipboard=unnamed
 
 " Disable one diff window during a three-way diff allowing you to cut out the
 " noise of a three-way diff and focus on just the changes between two versions
