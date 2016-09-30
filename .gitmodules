@@ -70,9 +70,6 @@
 [submodule "vim/.vim/bundle/argtextobj.vim"]
 	path = vim/.vim/bundle/argtextobj.vim
 	url = https://github.com/vim-scripts/argtextobj.vim.git
-[submodule "vim/.vim/bundle/vim-geeknote"]
-	path = vim/.vim/bundle/vim-geeknote
-	url = https://github.com/neilagabriel/vim-geeknote
 [submodule "vim/.vim/bundle/SimpylFold"]
 	path = vim/.vim/bundle/SimpylFold
 	url = https://github.com/tmhedberg/SimpylFold.git
