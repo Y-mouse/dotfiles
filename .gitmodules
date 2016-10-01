@@ -88,3 +88,12 @@
 [submodule "vim/.vim/bundle/ofaddinbox.vim"]
 	path = vim/.vim/bundle/ofaddinbox.vim
 	url = git@github.com:Mistobaan/ofaddinbox.vim.git
+[submodule "vim/.vim/bundle/vim-airline"]
+	path = vim/.vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "fonts"]
+	path = fonts
+	url = https://github.com/powerline/fonts
+[submodule "vim/.vim/bundle/vim-gitgutter"]
+	path = vim/.vim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
