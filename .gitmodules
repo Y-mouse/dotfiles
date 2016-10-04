@@ -29,10 +29,6 @@
 	path = vim/.vim/bundle/vim-ipython
 	url = git://github.com/ivanov/vim-ipython
 
-[submodule "vim/.vim/bundle/pyflakes"]
-	path = vim/.vim/bundle/pyflakes
-	url = https://github.com/mitechie/pyflakes-pathogen.git
-
 [submodule "vim/.vim/bundle/syntastic"]
 	path = vim/.vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
@@ -97,3 +93,24 @@
 [submodule "vim/.vim/bundle/vim-gitgutter"]
 	path = vim/.vim/bundle/vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "vim/.vim/bundle/vim-autopep8"]
+	path = vim/.vim/bundle/vim-autopep8
+	url = https://github.com/tell-k/vim-autopep8.git
+[submodule "vim/.vim/bundle/YCM-Generator"]
+	path = vim/.vim/bundle/YCM-Generator
+	url = https://github.com/rdnetto/YCM-Generator.git
+[submodule "vim/.vim/bundle/vim-conda"]
+	path = vim/.vim/bundle/vim-conda
+	url = https://github.com/cjrh/vim-conda
+[submodule "vim/.vim/bundle/vim-slime"]
+	path = vim/.vim/bundle/vim-slime
+	url = git://github.com/jpalardy/vim-slime.git
+[submodule "vim/.vim/bundle/ultisnips"]
+	path = vim/.vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim/.vim/bundle/python-mode"]
+	path = vim/.vim/bundle/python-mode
+	url = https://github.com/klen/python-mode.git
+[submodule "vim/.vim/bundle/pydoc.vim"]
+	path = vim/.vim/bundle/pydoc.vim
+	url = https://github.com/fs111/pydoc.vim.git

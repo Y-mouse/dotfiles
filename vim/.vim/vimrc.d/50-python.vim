@@ -137,6 +137,9 @@ let g:syntastic_always_populate_loc_List = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+" use ctrl+w E to do the checking
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 " use python 
 let g:syntastic_python_checkers = ['pylint']
