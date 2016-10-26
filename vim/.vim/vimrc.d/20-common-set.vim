@@ -336,3 +336,6 @@ syntax enable
 " file name and sometimes by inspecting the contents of the file for specific
 " text.
 filetype indent plugin on
+
+" automatically change window's cwd to file's dir
+set autochdir

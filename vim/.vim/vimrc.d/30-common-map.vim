@@ -25,7 +25,7 @@ nmap <silent> <F12> :!find $(pwd)
       \ :!cscope -q -b -i cscope.files -f cscope.out<CR>
       \ :cs reset<CR>
 
-" Swap keys for jumping with marks; ` jumps also to the colum
+" Swap keys for jumping with marks; ` jumps also to the column
 nnoremap                  `     '
 nnoremap                  '     `
 

@@ -162,7 +162,7 @@
     cleanup = "!git branch --merged | egrep -v '^.*master' | egrep -v '^.*develop' | xargs -n 1 git branch -d"
 
 [credential]
-	helper = osxkeychain
+	helper = cache 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

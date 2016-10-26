@@ -114,3 +114,15 @@
 [submodule "vim/.vim/bundle/pydoc.vim"]
 	path = vim/.vim/bundle/pydoc.vim
 	url = https://github.com/fs111/pydoc.vim.git
+[submodule "vim/.vim/bundle/vim-textobj-python"]
+	path = vim/.vim/bundle/vim-textobj-python
+	url = https://github.com/bps/vim-textobj-python.git
+[submodule "vim/.vim/bundle/vim-test"]
+	path = vim/.vim/bundle/vim-test
+	url = https://github.com/janko-m/vim-test.git
+[submodule "vim/.vim/bundle/vim-dispatch"]
+	path = vim/.vim/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
+[submodule "vim/.vim/bundle/tagbar"]
+	path = vim/.vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git

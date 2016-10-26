@@ -15,9 +15,9 @@ export EDITOR='vim'
 export VIMRUNTIME=/usr/share/vim/vim80
 
 # CDPATH !http://linux.101hacks.com/cd-command/cdpath/
-if test "${PS1+set}"
-  then CDPATH=$HOME/workspace
-fi
+# if test "${PS1+set}"
+#   then CDPATH=$HOME/workspace
+# fi
 
 ulimit -c unlimited
 ulimit -d unlimited
