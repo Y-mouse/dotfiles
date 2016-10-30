@@ -4,10 +4,11 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
 
 " PEP8 indentation
-au FileType python set tabstop=2
+au FileType python set tabstop=4
 au FileType python set softtabstop=4
 au FileType python set shiftwidth=4
 au FileType python set textwidth=79
+au FileType python setlocal smarttab
 au FileType python set expandtab
 au FileType python set autoindent
 "au FileType python set fileformat=unixlet
@@ -25,7 +26,8 @@ let g:pymode_rope = 0
 
 "Linting
 let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_checkers = ['mccabe', 'pyflakes', 'pylint', 'pep8', 'pep257']
+let g:pymode_lint_ignore = ['E111']
 
 " Auto check on save
 let g:pymode_lint_write = 1
