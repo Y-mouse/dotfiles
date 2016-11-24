@@ -123,3 +123,9 @@
 [submodule "vim/.vim/bundle/tagbar"]
 	path = vim/.vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "vim/.vim/bundle/--force"]
+	path = vim/.vim/bundle/--force
+	url = https://github.com/vim-scripts/Conque-Shell.git
+[submodule "vim/.vim/bundle/Conque-Shell"]
+	path = vim/.vim/bundle/Conque-Shell
+	url = https://github.com/vim-scripts/Conque-Shell.git
