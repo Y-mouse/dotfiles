@@ -26,8 +26,8 @@ let g:pymode_rope = 0
 
 "Linting
 let g:pymode_lint = 1
-let g:pymode_lint_checkers = ['mccabe', 'pyflakes', 'pylint', 'pep8', 'pep257']
-let g:pymode_lint_ignore = ['E111']
+let g:pymode_lint_checkers = ['mccabe', 'pyflakes', 'pylint', 'pep257']
+let g:pymode_lint_ignore = "D100,E111,C0111,D102,D101,E114"
 
 " Auto check on save
 let g:pymode_lint_write = 1

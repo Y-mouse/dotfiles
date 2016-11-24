@@ -4,10 +4,10 @@
 autocmd FileType python map <buffer> <F8> :call Autopep8()<CR>
 
 " Do not fix these errors/warnings (default: E226,E24,W6)
-let g:autopep8_ignore="E501,W293"
+let g:autopep8_ignore=""
 
 "Fix only these errors/warnings (e.g. E4,W)
-let g:autopep8_select="E501,W293"
+let g:autopep8_select=""
 
 "Maximum number of additional pep8 passes (default: 100)
 let g:autopep8_pep8_passes=100
