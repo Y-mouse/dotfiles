@@ -1,7 +1,3 @@
-
-
-
-
 " NERD_tree config
 let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\.swp$']

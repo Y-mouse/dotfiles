@@ -31,10 +31,11 @@ function tf_build()
     bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
     echo "to install please type: sudo pip install $(ls /tmp/tensorflow_pkg/*.whl)"
 }
+
 function tf_dev_build()
 {
     echo "building +cuda +dbg +strip tf"
-    bazel build -c opt --config cuda -c dbg --strip=never //tensorflow/tools/pip_package:build_pip_package
+    bazel build -c opt --config cuda -c dbg --strip=never --spawn_strategy=sandboxed //tensorflow/tools/pip_package:build_pip_package
 }
 
 function tf_dev_py_test()
@@ -42,4 +43,9 @@ function tf_dev_py_test()
      bazel test --test_output=streamed --verbose_failures -c opt --config cuda -c dbg --strip=never --test_arg $1 //tensorflow/python/
 }
 
-
+function tf_install_python()
+{
+     bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+     wheel_package=$(ls /tmp/tensorflow_pkg/*.whl)
+     echo "pip install $wheel_package"
+}

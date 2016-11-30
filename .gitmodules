@@ -129,3 +129,6 @@
 [submodule "vim/.vim/bundle/Conque-Shell"]
 	path = vim/.vim/bundle/Conque-Shell
 	url = https://github.com/vim-scripts/Conque-Shell.git
+[submodule "vim/.vim/bundle/vim-tmux-navigator"]
+	path = vim/.vim/bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git

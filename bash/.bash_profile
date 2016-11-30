@@ -1,6 +1,6 @@
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
-export PROMPT_COMMAND='__git_ps1 "\u@\h:\W" "\\\$ ";'
+export PROMPT_COMMAND='__git_ps1 "\u@\h:\W[\j]" "\\\$ ";'
 
 GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS="yes"
@@ -10,6 +10,9 @@ export PATH="$HOME/anaconda2/bin:$PATH"
 
 # added linux brew
 export PATH="$HOME/.linuxbrew/bin:$PATH"
+
+# added by Bazel
+export PATH="$HOME/bin:$PATH"
 
 export EDITOR='vim'
 export VIMRUNTIME=/usr/share/vim/vim80
