@@ -132,3 +132,18 @@
 [submodule "vim/.vim/bundle/vim-tmux-navigator"]
 	path = vim/.vim/bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/.vim/bundle/limelight.vim"]
+	path = vim/.vim/bundle/limelight.vim
+	url = https://github.com/junegunn/limelight.vim.git
+[submodule "vim/.vim/bundle/goyo.vim"]
+	path = vim/.vim/bundle/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git
+[submodule "vim/.vim/bundle/vim-quickrun"]
+	path = vim/.vim/bundle/vim-quickrun
+	url = https://github.com/thinca/vim-quickrun
+[submodule "vim/.vim/bundle/vimux"]
+	path = vim/.vim/bundle/vimux
+	url = https://github.com/benmills/vimux.git
+[submodule "vim/.vim/bundle/vim-airline-themes"]
+	path = vim/.vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git

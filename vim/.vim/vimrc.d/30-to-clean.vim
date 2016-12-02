@@ -1,18 +1,3 @@
-
-"show hidden files in ctrl_p
-let g:ctrlp_show_hidden = 1
-" CtrlP configuration
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/]\.(git|hg|svn)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ }
-
-
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256
@@ -25,10 +10,6 @@ colorscheme solarized
 let g:solarized_diffmode="high"
 
 set guifont=Inconsolata:h18
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" "BASIC EDITING CONFIGURATION
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " disable startup message
 set shortmess+=I
@@ -95,7 +76,6 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " set wildmode=longest,list
 " " make tab completion for files/buffers act like bash
 " set wildmenu
-" let mapleader=","
 " set number
 
 " autocmd FileType python set

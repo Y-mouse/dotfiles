@@ -6,6 +6,7 @@
 	excludesfile = ~/.gitignore_global
 	compress = 6
 	editor = subl -n -w
+	autocrlf = input
 [diff]
 	tool = vimdiff
     conflictstyle = diff3
