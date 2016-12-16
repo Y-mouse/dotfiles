@@ -46,3 +46,4 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 eval "$(register-python-argcomplete conda)"
 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64

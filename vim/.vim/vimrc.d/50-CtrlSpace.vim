@@ -27,3 +27,9 @@ let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1
 
+" Turns on the default mapping. If you turn off this option (`0`) you will
+" have to provide your own mapping to trigger the plugin. Default value:
+let g:CtrlSpaceSetDefaultMapping = 1
+
+let g:CtrlSpaceDefaultMappingKey = "<C-Space>"
+

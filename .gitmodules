@@ -150,3 +150,36 @@
 [submodule "vim/.vim/bundle/vim-ctrlspace"]
 	path = vim/.vim/bundle/vim-ctrlspace
 	url = https://github.com/vim-ctrlspace/vim-ctrlspace.git
+[submodule "vim/.vim/bundle/vim-ft-bzl"]
+	path = vim/.vim/bundle/vim-ft-bzl
+	url = https://github.com/google/vim-ft-bzl
+[submodule "vim/.vim/bundle/vim-clang-format"]
+	path = vim/.vim/bundle/vim-clang-format
+	url = https://github.com/rhysd/vim-clang-format.git
+[submodule "vim/.vim/bundle/vim-operator-user"]
+	path = vim/.vim/bundle/vim-operator-user
+	url = https://github.com/kana/vim-operator-user.git
+[submodule "vim/.vim/bundle/vimproc.vim"]
+	path = vim/.vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "vim/.vim/bundle/vim-markify"]
+	path = vim/.vim/bundle/vim-markify
+	url = https://github.com/dhruvasagar/vim-markify.git
+[submodule "vim/.vim/bundle/vim-codefmt"]
+	path = vim/.vim/bundle/vim-codefmt
+	url = https://github.com/google/vim-codefmt.git
+[submodule "vim/.vim/bundle/vim-maktaba"]
+	path = vim/.vim/bundle/vim-maktaba
+	url = https://github.com/google/vim-maktaba.git
+[submodule "vim/.vim/bundle/vim-glaive"]
+	path = vim/.vim/bundle/vim-glaive
+	url = https://github.com/google/vim-glaive.git
+[submodule "vim/.vim/bundle/vim-coffee-script"]
+	path = vim/.vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/.vim/bundle/typescript-vim"]
+	path = vim/.vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/.vim/bundle/vim-snippets"]
+	path = vim/.vim/bundle/vim-snippets
+	url = git@github.com:honza/vim-snippets.git

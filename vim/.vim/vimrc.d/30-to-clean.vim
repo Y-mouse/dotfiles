@@ -189,16 +189,6 @@ set ofu=sytaxcomplete
 
 
 
-
-
-
-
-
-
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
 " set clipboard=unnamed
 
 " Disable one diff window during a three-way diff allowing you to cut out the
