@@ -183,3 +183,9 @@
 [submodule "vim/.vim/bundle/vim-snippets"]
 	path = vim/.vim/bundle/vim-snippets
 	url = git@github.com:honza/vim-snippets.git
+[submodule "vim/.vim/bundle/yats.vim"]
+	path = vim/.vim/bundle/yats.vim
+	url = git@github.com:HerringtonDarkholme/yats.vim.git
+[submodule "vim/.vim/bundle/tsuquyomi"]
+	path = vim/.vim/bundle/tsuquyomi
+	url = git@github.com:Quramy/tsuquyomi.git

@@ -5,7 +5,6 @@ set nocompatible
 set hidden
 
 if has("gui_running")
-    " Settings for MacVim and Inconsolata font
     let g:CtrlSpaceSymbols = { "File": "◯", "CTab": "▣", "Tabs": "▢" }
 endif
 

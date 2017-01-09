@@ -27,7 +27,7 @@ set backspace=indent,eol,start
 
 " Copy indent from current line when starting a new line (typing <CR>
 " in Insert mode or when using the "o" or "O" command).
-set autoindent
+set noautoindent
 
 " Maximum width of text that is being inserted.  A longer line will be
 " broken after white space to get this width.
@@ -297,9 +297,9 @@ set spell
 " The name of the printer to be used for |:hardcopy|.
 set printdevice=hplj4l
 
-if has("gui_gtk2")
+if has("gui")
     " This is a list of fonts which will be used for the GUI version of Vim.
-    set guifont=Terminus\ 8
+    set guifont=LiberationMono\ Nerd\ Font\ Book
 
     " This option only has an effect in the GUI version of Vim.  It is a
     " sequence of letters which describes what components and options of the
@@ -337,5 +337,5 @@ syntax enable
 " text.
 filetype indent plugin on
 
-" automatically change window's cwd to file's dir
-set autochdir
+" don't automatically change window's cwd to file's dir
+set noautochdir

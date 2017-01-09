@@ -4,8 +4,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 let g:airline_theme='solarized'
 
-set guifont=Monofour\ for\ Powerline:h8
-
 " populate the g:airline_symbols dictionary with the powerline symbols
 let g:airline_powerline_fonts = 1
 

@@ -30,7 +30,7 @@ let g:pymode_lint_checkers = ['mccabe', 'pyflakes', 'pylint', 'pep257']
 let g:pymode_lint_ignore = "D100,E111,C0111,D102,D101,E114"
 
 " Auto check on save
-let g:pymode_lint_write = 1
+let g:pymode_lint_write = 0
 
 " Support virtualenv
 let g:pymode_virtualenv = 1
@@ -74,4 +74,7 @@ let g:SimpylFold_docstring_preview = 1
 set listchars=tab:>-,trail:-
 set list listchars=tab:→\ ,trail:·
 set list listchars=tab:→\ ,trail:·,extends:>,precedes:<,nbsp:_
+
+autocmd FileType python &let makeprg=pylint\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
+autocmd FileType python &set errorformat=%f:%l:\ %m
 
