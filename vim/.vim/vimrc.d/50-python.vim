@@ -1,7 +1,7 @@
 " Python functions and configuration
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
-autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
+" autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
 
 " PEP8 indentation
 au FileType python set tabstop=4
@@ -14,7 +14,7 @@ au FileType python set autoindent
 "au FileType python set fileformat=unixlet
 au FileType python set foldmethod=indent
 au FileType python set foldlevel=99
-au FileType python set encoding=utf-8 " UTF8 Support
+au FileType python set encoding=utf-8
 au FileType python syntax on
 au FileType python set number
 

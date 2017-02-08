@@ -42,6 +42,22 @@ function tf_dev_python_build()
     bazel build -c opt --config cuda -c dbg --strip=never //tensorflow/tools/pip_package:build_pip_package
 }
 
+function tf_python_build()
+{
+  bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma \
+  --copt=-mfpmath=both \
+  --copt=-msse4.2 --copt=-march=native --config=cuda -k \
+  --verbose_failures \
+  //tensorflow/tools/pip_package:build_pip_package
+}
+
+function tf_cc_build()
+{
+  bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma \
+  --copt=-mfpmath=both --copt=-msse4.2 \
+  --config=cuda -k //tensorflow:libtensorflow_cc.so 
+}
+
 function tf_dev_cc()
 {
     bazel build -c opt --config cuda -c dbg --strip=never //tensorflow:libtensorflow_cc.so
